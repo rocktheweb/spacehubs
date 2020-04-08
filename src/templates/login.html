@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spacehubs Africa - Login Page</title>
+</head>
+<body>
+    <div class="site page-sign page-sign--in">
+        <div class="page-sign__bgimage">
+            <h2 class="page-sign__tagline">
+                <span>Learn.</span>
+                <span>Connect.</span>    
+                <span>Build.</span>
+            </h2>
+        </div>
+        <header id="masthead" class="site-header">
+            <div class="container">
+                <nav class="navbar">
+                    <a class="site-brand">
+                        <img src="<%= require('../img/spacehubs-africa-logo.svg') %>" alt="Spacehubs Africa logo">
+                    </a>
+                    <button class="navbar-toggler">
+                        <div class="navbar-toggler__box">
+                            <span class="navbar-toggler__inner"></span>
+                        </div>
+                    </button>
+                </nav>
+            </div>
+        </header>
+        <main class="site-main">
+            <div class="container">
+                <form id="sign-in-form" action="">
+                    <fieldset class="form-fieldset">
+                        <legend>Spacehubs Africa Portal Login</legend>
+                        <div class="form-group">
+                            <label for="">E-mail*:</label>
+                            <input type="email" class="form-control" placeholder="username@domain.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Password*:</label>
+                            <input type="password" class="form-control" placeholder="Please enter Your password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="login-remember">
+                            <label class="form-check-label" for="login-remember">Remember me</label>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">sign in</button>
+                        </div>
+                        <a href="#">I forgot my login details</a>
+                    </fieldset>
+                </form>
+                <div class="register-box">
+                    <h6>If you don’t have Account</h6>
+                    <h2>Join the community</h2>
+                    <a href="#" class="btn btn-primary">register</a>
+                </div>
+            </div>
+        </main>
+        <div class="sign-menu-bar">
+            <ul class="sign-menu">
+                <li class="sign-menu__item"><a class="sign-menu__link" href="#">ABOUT US</a></li>
+                <li class="sign-menu__item"><a class="sign-menu__link" href="#">CONTACT</a></li>
+            </ul>
+            <ul class="sign-contact">
+                <li class="sign-contact__item sign-contact__item--email"><a href="mailto:contact@spacehubs.africa">contact@spacehubs.africa</a></li>
+                <li class="sign-contact__item sign-contact__item--socials"><a href="#"><img src="<%= require('../img/icon-facebook.svg') %>"></a><a href="#"><img src="<%= require('../img/icon-twitter.svg') %>"></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

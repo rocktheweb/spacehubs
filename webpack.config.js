@@ -2,6 +2,7 @@ const path = require('path');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = env => {
     
@@ -15,6 +16,7 @@ module.exports = env => {
         
         devServer: {
             contentBase: './dist',
+            index: 'login.html'
         },
         
         plugins: [
@@ -22,6 +24,10 @@ module.exports = env => {
             new MiniCssExtractPlugin({
                 filename: prod ? 'css/[name].[hash].css' : 'css/[name].css' 
             }),
+            new HtmlWebpackPlugin({
+                filename: 'login.html',
+                template: './src/templates/login.html'
+            })
         ],
         
         module: {

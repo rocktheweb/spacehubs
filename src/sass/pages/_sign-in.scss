@@ -1,0 +1,27 @@
+.page-sign--in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.page-sign--in .register-box {
+    .btn {
+        @include media-breakpoint-down(md) {
+            display: block;
+        }
+    }
+}
+
+#sign-in-form {
+    .btn {
+        @include media-breakpoint-down(sm) {
+            display: block;
+            width: 100%;
+        }
+    }
+    @include media-breakpoint-up(md) {
+        max-width: 400px;
+    }
+    margin-bottom: 4rem;
+}
