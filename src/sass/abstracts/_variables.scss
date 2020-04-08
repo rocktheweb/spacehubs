@@ -1,0 +1,125 @@
+$white:    #fff;
+$gray-100: #F5F5F5;
+$gray-400: #CBCBCB;
+$gray-700: #707070;
+$black:    #000;
+
+
+$indigo:  #1D2857;
+$red:     #E31F27;
+$yellow:  #FDD35D;
+$green:   #1B7951;
+
+
+$primary:       #131C26;
+$secondary:     $gray-700;
+$dark:          $indigo;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+// $body-bg:                   $white !default;
+$body-color:                $primary;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-hover-color:                       $indigo;
+$link-hover-decoration:                   none;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+    xs:   0,
+    sm:   576px,
+    md:   768px,
+    lg:   992px,
+    xl:   1200px,
+    xxl:  1600px
+);
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+    sm:     540px,
+    md:     720px,
+    lg:     960px,
+    xl:     1140px,
+    xxl:    83.3333%
+);
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-color:                $gray-400;
+
+$border-radius:               .6rem !default;
+
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$font-size-base:              1.4rem;
+
+$h1-font-size:                $font-size-base * 2.85;
+$h2-font-size:                $font-size-base * 2.28;
+$h3-font-size:                $font-size-base * 2;
+$h4-font-size:                $font-size-base * 1.7;
+$h5-font-size:                $font-size-base * 1.4;
+$h6-font-size:                $font-size-base;
+
+$headings-font-family:        'Fjalla One', sans-serif;
+$headings-font-weight:        400;
+$headings-line-height:        1.25;
+
+// $headings-margin-bottom:      4rem;
+
+
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y:         1.375rem;
+$input-btn-padding-x:         2rem;
+
+
+// Buttons
+
+$btn-padding-y:               1rem;
+$btn-padding-x:               3.6rem;
+$btn-font-family:             $headings-font-family;
+$btn-font-size:               1.8rem;
+
+$btn-border-radius:           0;
+
+//Forms 
+
+$form-group-margin-bottom:              2rem;
+
+$input-placeholder-color:               $gray-700;
+
+$custom-control-indicator-size:         1.6rem;
+$custom-control-indicator-border-color: $border-color;
+
+$custom-control-indicator-checked-color:        $primary;
+$custom-control-indicator-checked-bg:           $white;
+$custom-control-indicator-checked-border-color: $custom-control-indicator-border-color;

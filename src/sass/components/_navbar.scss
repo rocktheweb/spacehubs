@@ -1,0 +1,75 @@
+.site-brand {
+    display: block;
+    width:210px;
+    @include media-breakpoint-up(md) {
+        width:260px;
+    }
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-toggler {
+    padding: 10px;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 1020;
+    &:focus {
+        outline: none;
+    }
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+    &__box {
+        position: relative;
+        display: block;
+        width: 28px;
+        height: 21px;
+    }
+    &__inner {
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: background-color .1s ease-in-out,border-color .1s ease-in-out;
+        background-color: $primary;
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: $primary;
+            transition: transform .2s ease-in-out;
+        }
+        &::before {
+            top: -8px;
+        }
+        &::after {
+            top: 8px;
+        }
+    }
+    .navbar--active & {
+        &__inner {
+            background-color: transparent;
+            border-color: transparent;
+            &::before, &::after {
+                background-color: $white;
+            }
+            &::before {
+                transform: translateY(8px) rotate(45deg);
+            }
+            &::after {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+    }
+}
+
