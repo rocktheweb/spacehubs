@@ -1,0 +1,332 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spacehubs Africa - Register Page</title>
+</head>
+<body>
+    <div class="site page-sign page-sign--up">
+        <div class="page-sign__bgimage">
+            <h2 class="page-sign__tagline">
+                <span>Learn.</span>
+                <span>Connect.</span>    
+                <span>Build.</span>
+            </h2>
+        </div>
+        <header id="masthead" class="site-header">
+            <div class="container">
+                <nav class="navbar">
+                    <a class="site-brand">
+                        <img src="<%= require('../img/spacehubs-africa-logo.svg') %>" alt="Spacehubs Africa logo">
+                    </a>
+                    <button class="navbar-toggler">
+                        <div class="navbar-toggler__box">
+                            <span class="navbar-toggler__inner"></span>
+                        </div>
+                    </button>
+                </nav>
+            </div>
+        </header>
+        <main class="site-main">
+            <div class="container">
+                <form id="sign-up-form" class="multiform" action="">
+                    <ul class="multiform-indicators">
+                        <li class="multiform-indicator">
+                            <span class="multiform-indicator__number">01</span>
+                            <span class="multiform-indicator__label">Sign Up</span>
+                        </li>
+                        <li class="multiform-indicator">
+                            <span class="multiform-indicator__number">02</span>
+                            <span class="multiform-indicator__label">Sth about you</span>
+                        </li>
+                        <li class="multiform-indicator">
+                            <span class="multiform-indicator__number">03</span>
+                            <span class="multiform-indicator__label">Interests & Skills</span>
+                        </li>
+                        <li class="multiform-indicator">
+                            <span class="multiform-indicator__number">04</span>
+                            <span class="multiform-indicator__label">Contact</span>
+                        </li>
+                        <li class="multiform-indicator">
+                            <span class="multiform-indicator__number">05</span>
+                            <span class="multiform-indicator__label">Profile photo</span>
+                        </li>
+                    </ul>
+                    <div class="multiform-tabs">
+                        <!-- form step -->
+                        <fieldset id="account-details" class="multiform-tab form-fieldset">
+                            <legend>Sign Up</legend>
+                            <div class="form-group">
+                                <label for="">E-mail*:</label>
+                                <input type="email" class="form-control" placeholder="username@domain.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Username*:</label>
+                                <input type="text" class="form-control" placeholder="Please insert your unique username">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Birthday*:</label>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <select class="form-control" id="birthday-day">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-control" id="birthday-month">
+                                            <option>January</option>
+                                            <option>February</option>
+                                            <option>March</option>
+                                            <option>April</option>
+                                            <option>May</option>
+                                            <option>June</option>	
+                                            <option>July</option>
+                                            <option>August</option>
+                                            <option>September</option>
+                                            <option>October</option>
+                                            <option>November</option>
+                                            <option>December</option>
+    
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <select class="form-control" id="birthday-year">
+                                            <option>1987</option>
+                                            <option>1988</option>
+                                            <option>1989</option>
+                                            <option>1990</option>
+                                            <option>1991</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Password*:</label>
+                                <input type="password" class="form-control" placeholder="Please enter Your password">
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="consents">
+                                <label class="form-check-label" for="consents">I accept the <a href="#"><strong>Terms & Conditions</strong></a>, <a href="#"><strong>Code of Conduct</strong></a> and the <a href=""><strong>Privacy Policy</strong></a>.</label>
+                            </div>
+                        </fieldset>
+                        <!-- form step -->
+                        <fieldset id="personal-details" class="form-fieldset multiform-tab">
+                            <legend>Tell us a little about yourself</legend>
+                            <div class="fieldset-content">
+                                <div class="form-group">
+                                    <label for="">First Name*:</label>
+                                    <input type="text" class="form-control" placeholder="Enter your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Last Name*:</label>
+                                    <input type="text" class="form-control" placeholder="Enter you Last Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Nationality*:</label>
+                                    <input type="text" class="form-control" placeholder="Start typing country">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Gender*:</label>
+                                    <select class="form-control" id="gender">
+                                        <option>male</option>
+                                        <option>female</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Current Country:</label>
+                                    <input type="text" class="form-control" placeholder="Start typing country">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Current City:</label>
+                                    <input type="text" class="form-control" placeholder="Which city you are currently located in?">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Education*:</label>
+                                    <select class="form-control" id="education" placeholder="Choose education">
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">BIO*:</label>
+                                    <textarea class="form-control" id="bio" rows="5" placeholder="Introduce yourself in a few sentences"></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <!-- form step -->
+                        <fieldset id="interests-skills" class="form-fieldset multiform-tab" data-skippable="true">
+                            <legend>What are your interests and skills?</legend>
+                            <div class="fieldset-content">
+                                <div class="form-group">
+                                    <label for="">Gender*:</label>
+                                    <select class="form-control" id="role">
+                                        <option value="" disabled selected>Pick your role</option>
+                                        <option>role 1</option>
+                                        <option>role 2</option>
+                                    </select>
+                                </div>
+                                <fieldset>
+                                    <legend>Topics I am interested in:</legend>
+                                    <div class="checkbox-group">
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="i-satellite-navigation">
+                                            <label class="form-check-label" for="i-satellite-navigation">Satellite Navigation</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="i-it-and-programming">
+                                            <label class="form-check-label" for="i-it-and-programming">IT and Programming</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="i-satellite-communication">
+                                            <label class="form-check-label" for="i-satellite-communication">Satellite Communication</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="i-finance">
+                                            <label class="form-check-label" for="i-finance">Finance</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="i-earth-observation">
+                                            <label class="form-check-label" for="i-earth-observation">Earth Observation</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="i-space-law">
+                                            <label class="form-check-label" for="i-space-law">Space Law</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="i-space-systems-and-engineering">
+                                            <label class="form-check-label" for="i-space-systems-and-engineering">Space Systems and Engineering</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="i-enterpreneurship">
+                                            <label class="form-check-label" for="i-enterpreneurship">Enterpreneurship</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="i-space-science">
+                                            <label class="form-check-label" for="i-space-science">Space Science</label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Topics I am knowledgeable in:</legend>
+                                    <div class="checkbox-group">
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="k-satellite-navigation">
+                                            <label class="form-check-label" for="k-satellite-navigation">Satellite Navigation</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="k-it-and-programming">
+                                            <label class="form-check-label" for="k-it-and-programming">IT and Programming</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="k-satellite-communication">
+                                            <label class="form-check-label" for="k-satellite-communication">Satellite Communication</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="k-finance">
+                                            <label class="form-check-label" for="k-finance">Finance</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="k-earth-observation">
+                                            <label class="form-check-label" for="k-earth-observation">Earth Observation</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="k-space-law">
+                                            <label class="form-check-label" for="k-space-law">Space Law</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="k-space-systems-and-engineering">
+                                            <label class="form-check-label" for="k-space-systems-and-engineering">Space Systems and Engineering</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="k-enterpreneurship">
+                                            <label class="form-check-label" for="k-enterpreneurship">Enterpreneurship</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="" id="k-space-science">
+                                            <label class="form-check-label" for="k-space-science">Space Science</label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </fieldset>
+                        <!-- form step -->
+                        <fieldset id="contact" class="form-fieldset multiform-tab" data-skippable="true">
+                            <legend>Contact</legend>
+                            <div class="fieldset-content">
+                                <div class="form-group">
+                                    <label for="">Telephone / Whatsapp:</label>
+                                    <input type="tel" class="form-control" placeholder="+233 XXX XXX">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">LinkedIn:</label>
+                                    <input type="url" class="form-control" placeholder="https://www.linkedin.com/...">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Facebook:</label>
+                                    <input type="url" class="form-control" placeholder="https://www.facebook.com/...">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Instagram:</label>
+                                    <input type="url" class="form-control" placeholder="@username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Twitter:</label>
+                                    <input type="url" class="form-control" placeholder="@username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Github:</label>
+                                    <input type="url" class="form-control" placeholder="https://www.github.com/....">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Stack Overflow:</label>
+                                    <input type="url" class="form-control" placeholder="https://www.stackoverflow.com/....">
+                                </div>
+                            </div>
+                        </fieldset>
+                        <!-- form step -->
+                        <fieldset id="profile-picture" class="form-fieldset multiform-tab" data-skippable="true">
+                            <legend>Last step - Upload a profile picture</legend>
+                            <div class="fieldset-content">
+                                <div class="form-group">
+                                    <input type="file" class="custom-file-input" id="profile-picture-input">
+                                    <label for="profile-picture-input" class="custom-file-label">
+                                        <div class="label-item">
+                                            <span class="preview">
+                                                <span class="text">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="37.226" height="24.484" viewBox="0 0 37.226 24.484"><g transform="translate(0 0)"><path d="M33.622,31.874l1.914-2.412,1.708,2.165,3.65,4.613h-3.65v2.642a3.989,3.989,0,0,1-3.981,3.982H7.648a3.989,3.989,0,0,1-3.981-3.982V22.362A3.989,3.989,0,0,1,7.648,18.38H33.262a3.989,3.989,0,0,1,3.981,3.982V24.51H33.622V22.362a.362.362,0,0,0-.36-.364H7.648a.371.371,0,0,0-.364.364V38.883a.364.364,0,0,0,.364.36H33.262a.356.356,0,0,0,.36-.36V36.241H30.17Z" transform="translate(-3.667 -18.38)" fill="#cbcbcb"/></g><path d="M31.307,39.872l5.31,7.637H26l.022-.027H14.747l8.992-12.163L29.275,42.8Z" transform="translate(-10.42 -28.705)" fill="#cbcbcb"/><path d="M61.891,34.795a1.974,1.974,0,1,1-1.974,1.974A1.974,1.974,0,0,1,61.891,34.795Z" transform="translate(-37.952 -28.385)" fill="#cbcbcb"/></svg>
+                                                    <span class="title">Add photo</span>
+                                                    <span class="filename">Click to Browse...</span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="multiform-nav">
+                        <button type="button" data-value="prev" class="btn btn-secondary">go back</button>
+                        <button type="button" data-value="skip" class="btn btn-secondary">skip this step</button>
+                        <button type="button" data-value="next" class="btn btn-primary">sign up</button>
+                    </div>
+                </form>
+               
+            </div>
+        </main>
+        <div class="sign-menu-bar">
+            <ul class="sign-menu">
+                <li class="sign-menu__item"><a class="sign-menu__link" href="#">ABOUT US</a></li>
+                <li class="sign-menu__item"><a class="sign-menu__link" href="#">CONTACT</a></li>
+            </ul>
+            <ul class="sign-contact">
+                <li class="sign-contact__item sign-contact__item--email"><a href="mailto:contact@spacehubs.africa">contact@spacehubs.africa</a></li>
+                <li class="sign-contact__item sign-contact__item--socials"><a href="#"><img src="<%= require('../img/icon-facebook.svg') %>"></a><a href="#"><img src="<%= require('../img/icon-twitter.svg') %>"></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

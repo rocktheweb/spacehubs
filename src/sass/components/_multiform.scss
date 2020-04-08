@@ -1,0 +1,123 @@
+.multiform-indicators {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+    margin: 0 -0.5rem 4rem;
+    max-width: 600px;
+    width:100%;
+    &::before {
+        content:'';
+        position: absolute;
+        top:3.1rem;
+        left:0;
+        width:100%;
+        height:1px;
+        background-color:gray("100");
+    }
+}
+
+.multiform-indicator {
+    font-family: $headings-font-family;
+    font-size:1rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 .5rem;
+    &__number {
+        position: relative;
+        color:#AFAFAF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        width:6.2rem;
+        height:6.2rem;
+        margin: 0 auto .5rem;
+        border:1px solid rgba($gray-700, .1);
+        border-radius:50%;
+        background-color:$white;
+        z-index: 1;
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            border-radius:50%;
+            z-index:-1;
+        }
+        &::before {
+            width:4.4rem;
+            height:4.4rem;
+            background-color:rgba($gray-100, .4);
+        }
+        &::after {
+            width:3.2rem;
+            height:3.2rem;
+            background-color:gray("100");
+        }
+    }
+    &__label {
+        color:#AFAFAF;
+    }
+    &.active {
+        .multiform-indicator__number {
+            color:$white;
+            &::after {
+                background-color:$primary;
+            }
+        }
+        .multiform-indicator__label {
+            color:$body-color;
+        }
+    }
+}
+
+.multiform-tabs {
+    position: relative;
+}
+
+.multiform-tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .25s cubic-bezier(.2,1.13,.38,1.43);
+    transform: translateX(50px);
+    &.active {
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0px);
+    }
+}
+
+.multiform-nav {
+    display: flex;
+    flex-flow:row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+    button {
+        flex:1;
+        margin-right: .5rem;
+        margin-left: .5rem;
+        margin-bottom: 1rem;
+        white-space: nowrap;
+        @include media-breakpoint-up(sm) {
+            flex: 0 0 auto;
+            width: auto;
+        }
+        &.hide {
+            display:none;
+        }
+    }
+    button[data-value="skip"] {
+        @include media-breakpoint-up(sm) {
+            margin-left: auto;
+        }
+    }
+}

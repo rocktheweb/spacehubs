@@ -1,0 +1,140 @@
+.page-sign--up {
+    overflow-x: hidden;
+}
+
+#sign-up-form {
+    @include media-breakpoint-up(lg) {
+        max-width: 51.875%;
+    }
+    .multiform-indicator:last-child {
+        display: none;
+    }
+    .form-group {
+        @include media-breakpoint-up(sm) {
+            max-width: 400px;
+        }
+    }
+}
+
+#account-details {
+    .form-row .col:nth-child(2) {
+        flex:1;
+    }
+}
+#personal-details {
+    .fieldset-content {
+        display: grid;
+        @include media-breakpoint-up(sm) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap:3rem;
+        }
+    }
+    .form-group:last-child {
+        @include media-breakpoint-up(sm) {
+            grid-column: 1 / span 2;
+        }
+    }
+}
+
+#interests-skills {
+    .checkbox-group {
+        display: grid;
+        margin-bottom: 2rem;
+        @include media-breakpoint-up(sm) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+#contact {
+    .fieldset-content {
+        display: grid;
+        @include media-breakpoint-up(sm) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap:3rem;
+        }
+    }
+    .form-group:nth-child(2) {
+        @include media-breakpoint-up(sm) {
+            grid-column: 1 / span 1;
+        }
+    }
+}
+
+#profile-picture {
+    .custom-file-input {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+    
+    .custom-file-input  + label {
+        position: relative;
+        display: block;
+        width:100%;
+        max-width: 430px;
+        padding: 0;
+        cursor: pointer;
+        &::before {
+            content:'';
+            display: block;
+            padding-top: 100%;
+        }
+        .label-item {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background: top left / 100% no-repeat;
+            background-image:url('../img/profile-picture-bg.svg');
+        }
+        
+        .preview {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:63%;
+            height:63%;
+            border-radius:100%;
+            background-color:gray("100");
+            img {
+                position: absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                border-radius: 50%;
+                object-fit:cover;
+            }
+            .text {
+                display: block;
+                text-align: center;
+                font-size:1rem;
+                color: gray("400");
+                span {
+                    display: block;
+                }
+                svg {
+                    margin-bottom: 1rem;
+                }
+                .title {
+                    font-family: $headings-font-family;
+                    font-size:1.3em;
+                    text-transform: uppercase;
+                    color:gray("700");
+                    margin-bottom: .5rem;
+                }
+            }
+        }
+    }
+}

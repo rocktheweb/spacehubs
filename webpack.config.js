@@ -12,11 +12,14 @@ module.exports = env => {
 
         devtool: prod ? 'source-map' : 'eval-cheap-module-source-map',
         
-        entry: './src/js/app.js',
+        entry: {
+            'app': './src/js/app.js',
+            'sign-up': './src/js/sign-up.js'   
+        },
         
         devServer: {
             contentBase: './dist',
-            index: 'login.html'
+            index: 'register.html'
         },
         
         plugins: [
@@ -26,8 +29,14 @@ module.exports = env => {
             }),
             new HtmlWebpackPlugin({
                 filename: 'login.html',
-                template: './src/templates/login.html'
-            })
+                template: './src/templates/login.html',
+                chunks: ['app']
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'register.html',
+                template: './src/templates/register.html',
+                chunks: ['app', 'sign-up']
+            }),
         ],
         
         module: {
